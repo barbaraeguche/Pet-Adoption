@@ -13,7 +13,7 @@ const upload = multer( {storage: storage} );
 
 //database
 const { MongoClient, Binary } = require('mongodb');
-const mongoDB = 'mongodb://localhost:27017/pet-adoption';
+const mongoDB = 'INSERT CONNECTION STRING/INSERT CONNECTION NAME';
 const client = new MongoClient(mongoDB);
 
 async function connectToMongoDB() {
@@ -37,7 +37,7 @@ app.use(
     express.urlencoded({ extended: false }), //parse url-encoded bodies
     express.static(path.join(__dirname, 'public')), //serve static files from the "public" directory
     session({
-        secret: 'TbDwE2JH5jWsN6uPzFhYp',
+        secret: 'INSERT SECRET KEY',
         resave: false,
         saveUninitialized: true,
         cookie: { secure: false }
